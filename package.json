@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "cross-env NODE_ENV=testing jest",
-    "server": "cross-env NODE_ENV=devlopment nodemon index.js",
+    "server": "cross-env NODE_ENV=development nodemon index.js",
     "start": "node index.js"
   },
   "jest": {
