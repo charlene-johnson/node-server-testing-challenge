@@ -43,9 +43,10 @@ router.put("/:id", async (req, res, next) => {
     }
 })
 
-router.delete("/:id", (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
     try {
-        const blob = Blobs.remove(req.params.id)
+        const blob = await Blobs.remove(req.params.id)
+        console.log(blob)
         if(!blob) {
             return res.status(404).json({
                 message: "Blob not found"

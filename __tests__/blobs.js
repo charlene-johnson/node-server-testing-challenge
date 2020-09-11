@@ -68,7 +68,7 @@ describe("blobs integration tests", () => {
         expect(res.statusCode).toBe(204)
     })
     it("DELETE /api/blobs/:id -Not found", async () => {
-        const res = await supertest(server).get("/api/blobs/10")
+        const res = await supertest(server).delete("/api/blobs/10")
         expect(res.statusCode).toBe(404)
     })
 })
