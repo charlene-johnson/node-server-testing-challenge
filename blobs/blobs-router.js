@@ -40,7 +40,7 @@ router.put("/:id", async (req, res, next) => {
         res.status(200).json(blob)
     } catch(err) {
         next(err)
-    }
+    } 
 })
 
 router.delete("/:id", (req, res, next) => {
